@@ -1,0 +1,15 @@
+{
+  "name": "Harbor Daily",
+  "short_name": "Harbor Daily",
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#0F2A3D",
+  "background_color": "#F7F7F5",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

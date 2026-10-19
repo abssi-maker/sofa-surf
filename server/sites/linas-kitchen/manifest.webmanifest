@@ -1,0 +1,15 @@
+{
+  "name": "Lina's Kitchen",
+  "short_name": "Lina's Kitchen",
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#C8553D",
+  "background_color": "#FBF6EE",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linden Oak Lounge Chair | Cedar &amp; Pine</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2F5D46">
+<link rel="icon" href="icon-512.png">
+<meta property="og:site_name" content="Cedar &amp; Pine">
+<meta property="og:image" content="cover.jpg">
+<!-- A fictional furniture shop for the Sofa Surf demo. It declares WebMCP tools: the site says what an agent may do. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Linden Oak Lounge Chair",
+  "brand": {"@type": "Brand", "name": "Cedar & Pine"},
+  "sku": "CP-LINDEN-01",
+  "description": "A low lounge chair in solid oak with a wool-blend cushion.",
+  "offers": {"@type": "Offer", "price": "349.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock"},
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "128"}
+}
+</script>
+<style>
+  :root { --ink:#1f2a24; --soft:#5f6b63; --green:#2f5d46; --sand:#f6f3ec; --line:#e2ddd2; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--sand); color:var(--ink); font:17px/1.6 "Helvetica Neue", Arial, sans-serif; }
+  .sale { background:var(--green); color:#eaf2ec; text-align:center; font-size:14px; padding:9px; letter-spacing:.03em; }
+  header { background:#fff; border-bottom:1px solid var(--line); }
+  .bar { max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:30px; padding:18px 24px; }
+  .logo { font:700 26px/1 Georgia, serif; color:var(--green); text-decoration:none; letter-spacing:.02em; }
+  nav { display:flex; gap:24px; font-size:15px; }
+  nav a { color:var(--ink); text-decoration:none; }
+  .search { margin-left:auto; } .search input { width:240px; padding:9px 14px; border:1px solid var(--line); border-radius:8px; font:15px Arial; }
+  .cart { position:relative; font-weight:700; color:var(--ink); text-decoration:none; }
+  .cart span { background:var(--green); color:#fff; border-radius:12px; padding:1px 9px; margin-left:6px; font-size:14px; }
+  .crumbs { max-width:1200px; margin:16px auto 0; padding:0 24px; font-size:14px; color:var(--soft); }
+  .product { max-width:1200px; margin:0 auto; padding:16px 24px 40px; display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:48px; }
+  .gallery img { width:100%; border-radius:12px; display:block; background:#fff; }
+  .thumbs { display:flex; gap:10px; margin-top:10px; } .thumbs img { width:90px; border-radius:8px; border:2px solid transparent; } .thumbs img.on { border-color:var(--green); }
+  h1 { font:600 40px/1.15 Georgia, serif; margin:6px 0 8px; }
+  .rating { color:var(--soft); font-size:15px; } .stars { color:#c58b2b; letter-spacing:2px; }
+  .price { font-size:32px; font-weight:700; margin:16px 0 4px; }
+  .stock { color:var(--green); font-weight:700; font-size:15px; }
+  .opts { margin:20px 0; } .opts b { display:block; font-size:14px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+  .swatch { display:inline-block; padding:8px 16px; border:2px solid var(--line); border-radius:24px; margin-right:8px; background:#fff; font-size:15px; }
+  .swatch.on { border-color:var(--green); }
+  .qty { display:inline-flex; align-items:center; border:1px solid var(--line); border-radius:8px; background:#fff; } .qty button { border:0; background:none; font-size:20px; width:40px; height:44px; } .qty span { width:36px; text-align:center; }
+  .add { display:block; width:100%; margin-top:18px; background:var(--green); color:#fff; border:0; padding:16px; font:700 18px Arial; border-radius:10px; }
+  .delivery { margin-top:16px; font-size:15px; color:var(--soft); background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 16px; }
+  .info { max-width:1200px; margin:0 auto; padding:0 24px 40px; display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+  h2 { font:600 28px Georgia, serif; margin:30px 0 10px; }
+  table { border-collapse:collapse; width:100%; background:#fff; border-radius:10px; overflow:hidden; } td { padding:10px 16px; border-bottom:1px solid var(--line); } td:first-child { color:var(--soft); width:45%; }
+  .review { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 18px; margin-bottom:12px; font-size:16px; }
+  .more { max-width:1200px; margin:0 auto; padding:0 24px 60px; } .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .grid a { background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px; color:var(--ink); text-decoration:none; } .grid img { width:100%; border-radius:8px; }
+  footer { background:var(--ink); color:#c9d2cc; text-align:center; padding:28px; font-size:14px; }
+  .cookie { position:fixed; left:24px; bottom:24px; width:420px; background:#fff; border-radius:14px; box-shadow:0 12px 40px rgba(0,0,0,.2); padding:20px 22px; font-size:15px; z-index:50; }
+  .cookie button { margin:10px 8px 0 0; padding:9px 16px; border-radius:8px; border:2px solid var(--green); font:700 14px Arial; }
+  .cookie .all { background:var(--green); color:#fff; } .cookie .nec { background:#fff; color:var(--green); }
+  .chat { position:fixed; right:24px; bottom:24px; background:var(--green); color:#fff; border-radius:30px; padding:14px 20px; font-weight:700; box-shadow:0 8px 24px rgba(0,0,0,.2); z-index:40; }
+  .toast { position:fixed; top:20px; left:50%; transform:translateX(-50%); background:var(--ink); color:#fff; padding:14px 22px; border-radius:10px; font-weight:700; display:none; z-index:70; }
+</style>
+</head>
+<body>
+<div class="sale">Autumn sale: 15% off sofas and chairs with code LEAF15 · Free delivery over $200</div>
+<header>
+  <div class="bar">
+    <a class="logo" href="./">Cedar &amp; Pine</a>
+    <nav aria-label="Main navigation"><a href="living-room.html">Living room</a><a href="living-room.html#chairs">Chairs</a><a href="#">Bedroom</a><a href="#">Dining</a><a href="living-room.html#sale">Sale</a></nav>
+    <form class="search" role="search"><input type="search" name="q" placeholder="Search furniture"></form>
+    <a class="cart" href="#" id="cart">Cart<span id="cart-count">0</span></a>
+  </div>
+</header>
+<main>
+<div class="crumbs"><a href="living-room.html">Living room</a> › <a href="living-room.html#chairs">Chairs</a> › Lounge chairs</div>
+
+<section class="product">
+  <div class="gallery">
+    <img id="main-photo" src="chair.svg" alt="Linden Oak Lounge Chair in natural oak">
+    <div class="thumbs"><img class="on" src="chair.svg" alt="Natural oak"><img src="chair-smoked.svg" alt="Smoked oak"></div>
+  </div>
+  <div>
+    <h1>Linden Oak Lounge Chair</h1>
+    <div class="rating"><span class="stars">★★★★★</span> 4.7 out of 5 · 128 reviews</div>
+    <div class="price">$349</div>
+    <div class="stock">In stock · ships in 2 days</div>
+    <div class="opts"><b>Finish</b><span class="swatch on" id="natural">Natural oak</span><span class="swatch" id="smoked">Smoked oak</span></div>
+    <div class="opts"><b>Quantity</b><span class="qty"><button>−</button><span>1</span><button>+</button></span></div>
+    <button class="add" id="add">Add to cart</button>
+    <div class="delivery">Free delivery in 5 to 7 working days. Free returns within 30 days.</div>
+  </div>
+</section>
+
+<section class="info">
+  <div>
+    <h2>About this chair</h2>
+    <p>The Linden is a low lounge chair made for slow evenings. Its frame is solid European oak, finished with a natural oil that you can refresh once a year.</p>
+    <p>The seat and back cushions are a wool-blend fabric over high-resilience foam. The cushion covers are removable and can be dry-cleaned.</p>
+    <h2>Dimensions</h2>
+    <table>
+      <tr><td>Width</td><td>72 cm (28.3 in)</td></tr>
+      <tr><td>Depth</td><td>78 cm (30.7 in)</td></tr>
+      <tr><td>Height</td><td>80 cm (31.5 in)</td></tr>
+      <tr><td>Seat height</td><td>42 cm (16.5 in)</td></tr>
+      <tr><td>Weight</td><td>14 kg (31 lb)</td></tr>
+      <tr><td>Assembly</td><td>Legs screw on, about 10 minutes</td></tr>
+    </table>
+  </div>
+  <div>
+    <h2>Reviews</h2>
+    <div class="review"><b>★★★★★ Perfect reading chair</b><br>Comfortable for hours, and the oak looks even better in person. Assembly took ten minutes.</div>
+    <div class="review"><b>★★★★☆ Lovely, a bit firm at first</b><br>The cushion softened after a couple of weeks. It fits nicely in a small living room.</div>
+    <div class="review"><b>★★★★★ Worth it</b><br>Delivery came in five days. The smoked oak is darker than the photos, in a good way.</div>
+  </div>
+</section>
+
+<section class="more">
+  <h2>You may also like</h2>
+  <div class="grid">
+    <a href="#"><img src="more0.svg" alt="">Alder Armchair<br><b>$289</b></a>
+    <a href="#"><img src="more1.svg" alt="">Walnut Reading Chair<br><b>$429</b></a>
+    <a href="#"><img src="more2.svg" alt="">Birch Accent Chair<br><b>$199</b></a>
+    <a href="#"><img src="more3.svg" alt="">Maple Rocking Chair<br><b>$379</b></a>
+  </div>
+</section>
+
+</main>
+
+<footer>© 2026 Cedar &amp; Pine · A fictional shop made for the Sofa Surf demo</footer>
+
+<div class="cookie" id="cookies"><b>Cookies at Cedar &amp; Pine</b><br>We use cookies to run the shop and, with your consent, for marketing.
+  <br><button class="nec" onclick="consent('necessary')">Use necessary cookies only</button><button class="all" onclick="consent('all')">Accept all</button></div>
+<div class="chat">Need help choosing? Chat with us</div>
+<div class="toast" id="toast"></div>
+
+<script>
+  function consent(c) { document.cookie = 'cp_consent=' + c + '; path=/'; document.getElementById('cookies').remove(); }
+  if (/cp_consent=/.test(document.cookie)) document.getElementById('cookies').remove();
+
+  // The shop's own cart. The page button and the WebMCP tool both go through it.
+  var cart = [];
+  var PRICE = 349;
+  function addToCart(quantity, finish) {
+    quantity = Math.max(1, Math.min(4, quantity || 1));
+    finish = finish === 'Smoked oak' ? 'Smoked oak' : 'Natural oak';
+    cart.push({sku: 'CP-LINDEN-01', quantity: quantity, finish: finish});
+    var count = cart.reduce(function (n, i) { return n + i.quantity; }, 0);
+    document.getElementById('cart-count').textContent = count;
+    var t = document.getElementById('toast');
+    t.textContent = 'Added ' + quantity + ' × Linden Oak Lounge Chair (' + finish + ') to your cart';
+    t.style.display = 'block';
+    setTimeout(function () { t.style.display = 'none'; }, 3500);
+    return {count: count, total: count * PRICE};
+  }
+  document.getElementById('add').onclick = function () { addToCart(1, 'Natural oak'); };
+
+  // WebMCP: the site declares what an agent may do here, and does it with its own code.
+  if (navigator.modelContext) {
+    navigator.modelContext.registerTool({
+      name: 'add_to_cart',
+      description: 'Add the Linden Oak Lounge Chair ($349) to the shopping cart.',
+      inputSchema: {type: 'object', properties: {
+        quantity: {type: 'integer', minimum: 1, maximum: 4, default: 1},
+        finish: {type: 'string', enum: ['Natural oak', 'Smoked oak'], default: 'Natural oak'}}},
+      annotations: {title: 'Add to cart', readOnlyHint: false},
+      execute: function (args) {
+        var r = addToCart(args && args.quantity, args && args.finish);
+        return {content: [{type: 'text', text: 'Added to cart. The cart now holds ' + r.count + ' item(s), $' + r.total + ' in total.'}]};
+      }
+    });
+    navigator.modelContext.registerTool({
+      name: 'check_delivery',
+      description: 'Check when the chair can be delivered.',
+      inputSchema: {type: 'object', properties: {}},
+      annotations: {title: 'Check delivery', readOnlyHint: true},
+      execute: function () {
+        return {content: [{type: 'text', text: 'Free delivery in 5 to 7 working days. Free returns within 30 days.'}]};
+      }
+    });
+  }
+</script>
+</body>
+</html>
