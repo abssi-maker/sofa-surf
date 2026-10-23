@@ -1,0 +1,29 @@
+# Secrets
+.env
+*.env
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.py[oc]
+.pytest_cache/
+
+# Node / Vega build
+node_modules/
+build/
+generated/
+*.vpkg
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Working notes (not part of the project)
+HANDOFF.md
+REVIEW.md
+design-prompt.md
+app/buildinfo.json
+*.mov
+*.mp4

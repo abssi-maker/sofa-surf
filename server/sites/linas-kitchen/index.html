@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weeknight Spaghetti Carbonara (25 Minutes!) | Lina's Kitchen</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#C8553D">
+<link rel="icon" href="icon-512.png">
+<meta property="og:site_name" content="Lina's Kitchen">
+<meta property="og:image" content="cover.jpg">
+<meta property="og:title" content="Weeknight Spaghetti Carbonara">
+<!-- A fictional food blog for the Sofa Surf demo: no real brand, person or product. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Weeknight Spaghetti Carbonara",
+  "author": {"@type": "Person", "name": "Lina Moretti"},
+  "prepTime": "PT10M", "cookTime": "PT15M", "totalTime": "PT25M",
+  "recipeYield": "4 servings",
+  "recipeCategory": "Dinner", "recipeCuisine": "Italian",
+  "recipeIngredient": [
+    "400 g spaghetti",
+    "150 g guanciale (or thick-cut pancetta), cut into strips",
+    "3 large eggs plus 1 extra yolk",
+    "80 g pecorino romano, finely grated, plus more to serve",
+    "1 tsp freshly ground black pepper",
+    "Salt for the pasta water"
+  ],
+  "recipeInstructions": [
+    {"@type": "HowToStep", "text": "Bring a large pot of water to the boil and salt it well. Cook the spaghetti until just al dente, about 9 minutes."},
+    {"@type": "HowToStep", "text": "While the pasta cooks, fry the guanciale in a large cold pan over medium heat for 6 to 8 minutes, until golden and crisp. Turn off the heat."},
+    {"@type": "HowToStep", "text": "In a bowl, whisk the eggs, the extra yolk, the pecorino and the black pepper into a thick paste."},
+    {"@type": "HowToStep", "text": "Scoop out a mug of the starchy pasta water, then drain the spaghetti and tip it into the pan with the guanciale. Toss to coat it in the fat."},
+    {"@type": "HowToStep", "text": "Wait one minute off the heat, then pour in the egg mixture with a splash of pasta water and toss quickly until the sauce turns glossy and creamy."},
+    {"@type": "HowToStep", "text": "Serve straight away with more pecorino and black pepper on top."}
+  ]
+}
+</script>
+<style>
+  :root { --ink:#2b2420; --soft:#6d625a; --rose:#c8553d; --cream:#fbf6ee; --line:#eadfce; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font:18px/1.65 Georgia, "Times New Roman", serif; }
+  a { color:var(--rose); }
+  .promo { background:#2b2420; color:#fbe9d7; text-align:center; font:600 14px/1 system-ui, sans-serif; padding:10px; letter-spacing:.04em; }
+  header.site { background:#fff; border-bottom:1px solid var(--line); }
+  .bar { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:28px; padding:16px 20px; }
+  .logo { font:italic 700 34px/1 Georgia, serif; color:var(--rose); text-decoration:none; white-space:nowrap; }
+  nav.menu { display:flex; gap:22px; font:600 15px/1 system-ui, sans-serif; text-transform:uppercase; letter-spacing:.06em; }
+  nav.menu a { color:var(--ink); text-decoration:none; }
+  .search { margin-left:auto; }
+  .search input { border:1px solid var(--line); border-radius:20px; padding:8px 16px; font:15px system-ui, sans-serif; width:220px; }
+  .ad-leader { max-width:970px; margin:18px auto; height:90px; background:repeating-linear-gradient(45deg,#f1e9dc,#f1e9dc 10px,#efe5d5 10px,#efe5d5 20px); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; gap:16px; font:600 15px system-ui, sans-serif; color:#8a7d70; }
+  .ad-label { font:600 10px/1 system-ui, sans-serif; letter-spacing:.12em; color:#a89a8c; text-transform:uppercase; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 20px 60px; display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:48px; }
+  main h1 { font-size:46px; line-height:1.15; margin:18px 0 8px; }
+  .byline { font:15px system-ui, sans-serif; color:var(--soft); margin-bottom:14px; }
+  .jump { display:inline-block; background:var(--rose); color:#fff; text-decoration:none; font:700 14px system-ui, sans-serif; padding:10px 18px; border-radius:6px; margin:0 10px 20px 0; }
+  .hero { width:100%; border-radius:10px; display:block; }
+  .caption { font:14px system-ui, sans-serif; color:var(--soft); margin:6px 0 24px; }
+  main h2 { font-size:30px; margin:40px 0 10px; }
+  .ad-inline { margin:30px 0; padding:18px; background:#fff; border:1px dashed #d8c9b4; display:flex; gap:18px; align-items:center; font:15px system-ui, sans-serif; }
+  .ad-inline img { width:140px; border-radius:6px; }
+  .recipe { background:#fff; border:2px solid var(--line); border-radius:14px; padding:28px 32px; margin-top:40px; }
+  .recipe h2 { margin-top:0; }
+  .meta { display:flex; gap:28px; font:15px system-ui, sans-serif; color:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:12px 0; margin-bottom:18px; }
+  .meta b { display:block; color:var(--ink); font-size:18px; }
+  .recipe-ingredients li, .recipe-instructions li { margin-bottom:10px; }
+  .notes { background:#fdf2e6; border-radius:10px; padding:16px 22px; }
+  aside.side { font:15px/1.5 system-ui, sans-serif; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px; margin:18px 0; }
+  .card h3 { font:700 15px system-ui, sans-serif; text-transform:uppercase; letter-spacing:.08em; margin:0 0 12px; }
+  .card a { display:flex; gap:12px; align-items:center; text-decoration:none; color:var(--ink); margin-bottom:12px; }
+  .card a img { width:84px; border-radius:6px; }
+  .comments .c { border-top:1px solid var(--line); padding:14px 0; font:16px/1.5 system-ui, sans-serif; }
+  footer { background:#2b2420; color:#d9cbbb; text-align:center; padding:30px; font:14px system-ui, sans-serif; }
+  .cookie { position:fixed; left:0; right:0; bottom:0; background:#fff; border-top:3px solid var(--rose); box-shadow:0 -8px 30px rgba(0,0,0,.15); padding:20px 28px; display:flex; align-items:center; gap:18px; font:15px/1.5 system-ui, sans-serif; z-index:50; }
+  .cookie p { margin:0; flex:1; }
+  .cookie button { font:700 14px system-ui, sans-serif; padding:10px 18px; border-radius:6px; border:2px solid var(--rose); cursor:pointer; }
+  .cookie .all { background:var(--rose); color:#fff; } .cookie .rej { background:#fff; color:var(--rose); } .cookie .set { background:none; border:none; text-decoration:underline; color:var(--soft); }
+  .modal { position:fixed; inset:0; background:rgba(25,18,14,.62); display:none; align-items:center; justify-content:center; z-index:60; }
+  .modal.on { display:flex; }
+  .modal .box { background:#fff; border-radius:16px; padding:36px 40px; width:520px; text-align:center; font:16px/1.5 system-ui, sans-serif; }
+  .modal h2 { font:700 30px Georgia, serif; margin:0 0 10px; color:var(--rose); }
+  .modal input { width:100%; padding:12px; margin:14px 0; border:1px solid var(--line); border-radius:8px; font:16px system-ui; }
+  .modal .go { background:var(--rose); color:#fff; border:0; padding:12px 26px; border-radius:8px; font:700 16px system-ui; }
+  .modal .no { display:block; margin:14px auto 0; background:none; border:0; color:var(--soft); text-decoration:underline; font:14px system-ui; }
+  .sticky-ad { position:fixed; right:18px; bottom:110px; width:300px; background:#fff; border:1px solid var(--line); box-shadow:0 10px 30px rgba(0,0,0,.18); border-radius:10px; padding:12px; font:14px system-ui, sans-serif; z-index:40; }
+</style>
+</head>
+<body>
+<div class="promo">FREE e-cookbook: 30 weeknight dinners when you subscribe to Lina's Letter</div>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="./">Lina's Kitchen</a>
+    <nav class="menu" aria-label="Main navigation">
+      <a href="./">Home</a><a href="recipes.html">Recipes</a><a href="recipes.html#weeknight">Weeknight</a><a href="recipes.html#pasta">Pasta</a><a href="#">About Lina</a>
+    </nav>
+    <form class="search" role="search"><input type="search" name="q" placeholder="Search recipes"></form>
+  </div>
+</header>
+
+<div class="ad-leader"><span class="ad-label">Advertisement</span> Copperline Cookware · Autumn sale · Up to 40% off pans</div>
+
+<div class="wrap">
+<main>
+  <article>
+    <h1>Weeknight Spaghetti Carbonara</h1>
+    <div class="byline">By Lina Moretti · Updated October 2026 · 412 comments</div>
+    <a class="jump" href="#recipe">Jump to recipe</a><a class="jump" href="#" style="background:#2b2420">Print recipe</a>
+    <img class="hero" src="carbonara.svg" alt="A plate of spaghetti carbonara with crisp guanciale and black pepper">
+    <p class="caption">My Tuesday-night carbonara, ready before the table is set.</p>
+
+    <p>Every family has a dish that tastes like home. In ours, it was my nonna's carbonara, made in a dented aluminium pan that she refused to replace. She cooked it on Sunday evenings when everyone was too tired to talk, and somehow the kitchen would fill with stories again before the plates were empty.</p>
+    <p>When I moved into my first tiny apartment, I tried to make it from memory and failed, many times. Scrambled eggs, clumpy cheese, a sauce that disappeared into the pasta. It took me years (and a lot of phone calls to my aunt Rosa) to understand that carbonara is not about adding things. It is about timing.</p>
+    <p>This is the version I make on weeknights now. It uses five ingredients you can find almost anywhere, one pan and one pot, and it is on the table in less time than a delivery would take to arrive.</p>
+
+    <div class="ad-inline"><img src="dish3.svg" alt=""><div><span class="ad-label">Sponsored</span><br><b>You won't believe these 12 kitchen gadgets chefs secretly use</b><br>Brightnest Home · Shop now</div></div>
+
+    <h2>Why you'll love it</h2>
+    <p>It is fast, it is cheap, and it feels like a treat. The sauce is made from eggs, cheese and the fat from the guanciale, emulsified with a splash of starchy pasta water. Nothing else.</p>
+    <p>Traditional carbonara has no cream: the eggs and pecorino make the sauce silky. If you have only ever had the creamy restaurant version, this one will surprise you.</p>
+
+    <h2>What is guanciale?</h2>
+    <p>Guanciale is cured pork cheek. It has more fat than pancetta and a deeper flavour, and that fat is what carries the sauce. Italian delis sell it in a piece; ask them to cut it 5 mm thick.</p>
+    <p>If you can't find guanciale, thick-cut pancetta or smoked bacon works fine. Bacon adds a smoky note that isn't traditional, but my kids love it.</p>
+
+    <div class="ad-inline"><img src="dish1.svg" alt=""><div><span class="ad-label">Advertisement</span><br><b>Meal kits from 2.99 a serving</b><br>FreshCrate · Get the app</div></div>
+
+    <h2>Tips for a silky sauce</h2>
+    <p>Take the pan off the heat before adding the eggs, or they will scramble. The pasta should be hot enough to cook the eggs gently, but the pan should not be sizzling.</p>
+    <p>Keep a mug of pasta water nearby. If the sauce looks thick or sticky, add a spoonful and toss again. If it looks runny, keep tossing: it thickens as it cools.</p>
+    <p>Grate the pecorino as finely as you can. Coarse cheese melts unevenly and makes clumps.</p>
+
+    <section class="recipe" id="recipe">
+      <h2>Weeknight Spaghetti Carbonara</h2>
+      <div class="meta"><span>Prep<b>10 min</b></span><span>Cook<b>15 min</b></span><span>Total time<b>25 minutes</b></span><span>Serves<b>4</b></span></div>
+      <div class="recipe-ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>400 g spaghetti</li>
+          <li>150 g guanciale (or thick-cut pancetta), cut into strips</li>
+          <li>3 large eggs plus 1 extra yolk</li>
+          <li>80 g pecorino romano, finely grated, plus more to serve</li>
+          <li>1 tsp freshly ground black pepper</li>
+          <li>Salt for the pasta water</li>
+        </ul>
+      </div>
+      <div class="recipe-instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Bring a large pot of water to the boil and salt it well. Cook the spaghetti until just al dente, about 9 minutes.</li>
+          <li>While the pasta cooks, fry the guanciale in a large cold pan over medium heat for 6 to 8 minutes, until golden and crisp. Turn off the heat.</li>
+          <li>In a bowl, whisk the eggs, the extra yolk, the pecorino and the black pepper into a thick paste.</li>
+          <li>Scoop out a mug of the starchy pasta water, then drain the spaghetti and tip it into the pan with the guanciale. Toss to coat it in the fat.</li>
+          <li>Wait one minute off the heat, then pour in the egg mixture with a splash of pasta water and toss quickly until the sauce turns glossy and creamy.</li>
+          <li>Serve straight away with more pecorino and black pepper on top.</li>
+        </ol>
+      </div>
+      <h3>Notes</h3>
+      <div class="notes">
+        <p>For two people, halve every ingredient: 200 g spaghetti, 1 egg plus 1 yolk, 40 g pecorino and 75 g guanciale.</p>
+        <p>No pecorino? Parmesan works, but the sauce will be a little milder and sweeter.</p>
+        <p>Carbonara doesn't reheat well. Eat it straight away, or keep the cooked guanciale and make the sauce fresh the next day.</p>
+      </div>
+    </section>
+
+    <section class="comments">
+      <h2>Comments</h2>
+      <div class="c"><b>Maria T.</b> Made this tonight with bacon and it was gone in five minutes. The tip about taking the pan off the heat saved me!</div>
+      <div class="c"><b>Dev K.</b> Finally a carbonara without cream. My Roman flatmate approves.</div>
+      <div class="c"><b>Sam W.</b> Can I make it with gluten-free spaghetti? <i>Lina: Yes, just save a little more pasta water, gluten-free pasta absorbs more.</i></div>
+    </section>
+  </article>
+</main>
+
+<aside class="side">
+  <div class="card"><h3>Hi, I'm Lina!</h3>Home cook, mum of two, and collector of nonna's recipes. Dinner should be easy, and still feel special.</div>
+  <div class="card"><span class="ad-label">Advertisement</span><br><img src="dish5.svg" alt="" style="width:100%;border-radius:6px;margin-top:8px"><b>Copperline pans</b><br>Shop the autumn sale</div>
+  <div class="card"><h3>Trending now</h3>
+    <a href="#"><img src="dish0.svg" alt="">One-pot tomato orzo</a>
+    <a href="#"><img src="dish2.svg" alt="">Lemon ricotta pasta</a>
+    <a href="#"><img src="dish4.svg" alt="">Crispy chickpea bowls</a>
+  </div>
+  <div class="card"><h3>Sponsored stories</h3>
+    <a href="#">Doctors stunned by this one morning habit</a>
+    <a href="#">The 7 air fryers everyone is buying this fall</a>
+  </div>
+</aside>
+</div>
+
+<footer>© 2026 Lina's Kitchen · A fictional blog made for the Sofa Surf demo · Follow us everywhere</footer>
+
+<div class="sticky-ad"><span class="ad-label">Advertisement</span><br><b>FreshCrate meal kits</b><br>Your first box free. Get the app today.</div>
+
+<div class="modal" id="newsletter" role="dialog" aria-label="Newsletter sign-up">
+  <div class="box">
+    <h2>Never miss a recipe!</h2>
+    Join 80,000 home cooks and get Lina's Letter every Friday, plus a free e-cookbook.
+    <input type="email" placeholder="Your email address">
+    <button class="go">Subscribe</button>
+    <button class="no" onclick="document.getElementById('newsletter').classList.remove('on')">No thanks, I don't like free recipes</button>
+  </div>
+</div>
+
+<div class="cookie" id="cookies">
+  <p><b>We value your privacy.</b> We and our 214 partners use cookies to personalise ads and measure traffic. Choose "Accept all" to agree, or manage your choices.</p>
+  <button class="set">Manage options</button>
+  <button class="rej" onclick="choose('necessary')">Reject all</button>
+  <button class="all" onclick="choose('all')">Accept all</button>
+</div>
+
+<script>
+  function choose(c) {
+    document.cookie = 'lk_consent=' + c + '; path=/';
+    document.getElementById('cookies').remove();
+    console.log('consent', c);
+  }
+  if (/lk_consent=/.test(document.cookie)) document.getElementById('cookies').remove();
+  // The newsletter pop-up every food blog seems to have.
+  setTimeout(function () { document.getElementById('newsletter').classList.add('on'); }, 1200);
+</script>
+</body>
+</html>

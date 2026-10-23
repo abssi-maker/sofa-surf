@@ -1,0 +1,39 @@
+schema-version = 1
+
+[package]
+title = "Sofa Surf"
+version = "0.1.0"
+id = "com.clicker.app"
+
+[os.version]
+min = "1.2"
+target = "1.2"
+
+[needs]
+[[needs.module]]
+id = "/com.amazon.vega.os@IVega_1_2"
+
+[[needs.module]]
+id = "/com.amazon.kepler.keplerscript_4@IKeplerScript_0"
+
+[[needs.module]]
+id = "/com.amazon.kepler.webview_4@IWebview_4"
+
+
+
+[components]
+[[components.interactive]]
+id = "com.clicker.app.main"
+runtime-module = "/com.amazon.kepler.runtime.react_native_kepler_4@IReactNativeKepler_0"
+launch-type = "singleton"
+categories = ["com.amazon.category.main"]
+
+[wants]
+# Required for remote button events (useTVEventHandler).
+[[wants.service]]
+id = "com.amazon.inputd.service"
+
+# Sofa Surf is a web browser: it must open http:// sites too (WebView 4.0.2 blocks cleartext by default),
+# and the demo sites come from the Mac's backend over plain HTTP.
+[network-traffic-policy.cleartext]
+allowed-domains = ["*"]

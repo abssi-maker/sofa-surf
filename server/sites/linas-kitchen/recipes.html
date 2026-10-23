@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipes | Lina's Kitchen</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#C8553D">
+<link rel="icon" href="icon-512.png">
+<meta property="og:site_name" content="Lina's Kitchen">
+<meta property="og:image" content="cover.jpg">
+<meta property="og:title" content="Weeknight Spaghetti Carbonara">
+<!-- A fictional food blog for the Sofa Surf demo: no real brand, person or product. -->
+
+<style>
+  :root { --ink:#2b2420; --soft:#6d625a; --rose:#c8553d; --cream:#fbf6ee; --line:#eadfce; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font:18px/1.65 Georgia, "Times New Roman", serif; }
+  a { color:var(--rose); }
+  .promo { background:#2b2420; color:#fbe9d7; text-align:center; font:600 14px/1 system-ui, sans-serif; padding:10px; letter-spacing:.04em; }
+  header.site { background:#fff; border-bottom:1px solid var(--line); }
+  .bar { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:28px; padding:16px 20px; }
+  .logo { font:italic 700 34px/1 Georgia, serif; color:var(--rose); text-decoration:none; white-space:nowrap; }
+  nav.menu { display:flex; gap:22px; font:600 15px/1 system-ui, sans-serif; text-transform:uppercase; letter-spacing:.06em; }
+  nav.menu a { color:var(--ink); text-decoration:none; }
+  .search { margin-left:auto; }
+  .search input { border:1px solid var(--line); border-radius:20px; padding:8px 16px; font:15px system-ui, sans-serif; width:220px; }
+  .ad-leader { max-width:970px; margin:18px auto; height:90px; background:repeating-linear-gradient(45deg,#f1e9dc,#f1e9dc 10px,#efe5d5 10px,#efe5d5 20px); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; gap:16px; font:600 15px system-ui, sans-serif; color:#8a7d70; }
+  .ad-label { font:600 10px/1 system-ui, sans-serif; letter-spacing:.12em; color:#a89a8c; text-transform:uppercase; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 20px 60px; display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:48px; }
+  main h1 { font-size:46px; line-height:1.15; margin:18px 0 8px; }
+  .byline { font:15px system-ui, sans-serif; color:var(--soft); margin-bottom:14px; }
+  .jump { display:inline-block; background:var(--rose); color:#fff; text-decoration:none; font:700 14px system-ui, sans-serif; padding:10px 18px; border-radius:6px; margin:0 10px 20px 0; }
+  .hero { width:100%; border-radius:10px; display:block; }
+  .caption { font:14px system-ui, sans-serif; color:var(--soft); margin:6px 0 24px; }
+  main h2 { font-size:30px; margin:40px 0 10px; }
+  .ad-inline { margin:30px 0; padding:18px; background:#fff; border:1px dashed #d8c9b4; display:flex; gap:18px; align-items:center; font:15px system-ui, sans-serif; }
+  .ad-inline img { width:140px; border-radius:6px; }
+  .recipe { background:#fff; border:2px solid var(--line); border-radius:14px; padding:28px 32px; margin-top:40px; }
+  .recipe h2 { margin-top:0; }
+  .meta { display:flex; gap:28px; font:15px system-ui, sans-serif; color:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:12px 0; margin-bottom:18px; }
+  .meta b { display:block; color:var(--ink); font-size:18px; }
+  .recipe-ingredients li, .recipe-instructions li { margin-bottom:10px; }
+  .notes { background:#fdf2e6; border-radius:10px; padding:16px 22px; }
+  aside.side { font:15px/1.5 system-ui, sans-serif; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px; margin:18px 0; }
+  .card h3 { font:700 15px system-ui, sans-serif; text-transform:uppercase; letter-spacing:.08em; margin:0 0 12px; }
+  .card a { display:flex; gap:12px; align-items:center; text-decoration:none; color:var(--ink); margin-bottom:12px; }
+  .card a img { width:84px; border-radius:6px; }
+  .comments .c { border-top:1px solid var(--line); padding:14px 0; font:16px/1.5 system-ui, sans-serif; }
+  footer { background:#2b2420; color:#d9cbbb; text-align:center; padding:30px; font:14px system-ui, sans-serif; }
+  .cookie { position:fixed; left:0; right:0; bottom:0; background:#fff; border-top:3px solid var(--rose); box-shadow:0 -8px 30px rgba(0,0,0,.15); padding:20px 28px; display:flex; align-items:center; gap:18px; font:15px/1.5 system-ui, sans-serif; z-index:50; }
+  .cookie p { margin:0; flex:1; }
+  .cookie button { font:700 14px system-ui, sans-serif; padding:10px 18px; border-radius:6px; border:2px solid var(--rose); cursor:pointer; }
+  .cookie .all { background:var(--rose); color:#fff; } .cookie .rej { background:#fff; color:var(--rose); } .cookie .set { background:none; border:none; text-decoration:underline; color:var(--soft); }
+  .modal { position:fixed; inset:0; background:rgba(25,18,14,.62); display:none; align-items:center; justify-content:center; z-index:60; }
+  .modal.on { display:flex; }
+  .modal .box { background:#fff; border-radius:16px; padding:36px 40px; width:520px; text-align:center; font:16px/1.5 system-ui, sans-serif; }
+  .modal h2 { font:700 30px Georgia, serif; margin:0 0 10px; color:var(--rose); }
+  .modal input { width:100%; padding:12px; margin:14px 0; border:1px solid var(--line); border-radius:8px; font:16px system-ui; }
+  .modal .go { background:var(--rose); color:#fff; border:0; padding:12px 26px; border-radius:8px; font:700 16px system-ui; }
+  .modal .no { display:block; margin:14px auto 0; background:none; border:0; color:var(--soft); text-decoration:underline; font:14px system-ui; }
+  .sticky-ad { position:fixed; right:18px; bottom:110px; width:300px; background:#fff; border:1px solid var(--line); box-shadow:0 10px 30px rgba(0,0,0,.18); border-radius:10px; padding:12px; font:14px system-ui, sans-serif; z-index:40; }
+</style>
+</head>
+<body>
+<div class="promo">FREE e-cookbook: 30 weeknight dinners when you subscribe to Lina's Letter</div>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="./">Lina's Kitchen</a>
+    <nav class="menu" aria-label="Main navigation">
+      <a href="./">Home</a><a href="recipes.html">Recipes</a><a href="recipes.html#weeknight">Weeknight</a><a href="recipes.html#pasta">Pasta</a><a href="#">About Lina</a>
+    </nav>
+    <form class="search" role="search"><input type="search" name="q" placeholder="Search recipes"></form>
+  </div>
+</header>
+<style>.rwrap{max-width:1180px;margin:0 auto;padding:10px 20px 60px} .rwrap h1{font-size:44px;margin:22px 0 4px} .rwrap h2{font-size:30px;margin:34px 0 12px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px} .rc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--ink);text-decoration:none;display:block}
+.rc img{width:100%;border-radius:8px;display:block;margin-bottom:10px} .rc b{display:block;font-size:20px} .rc span{font:14px system-ui,sans-serif;color:var(--soft)}</style>
+<main class="rwrap"><h1>Recipes</h1><p>Easy dinners that still feel special. New recipes every Friday.</p>
+<h2 id="weeknight">Weeknight dinners</h2><div class="rgrid"><a class="rc" href="#"><img src="dish0.svg" alt=""><b>One-pot tomato orzo</b><span>30 min</span></a><a class="rc" href="#"><img src="dish4.svg" alt=""><b>Crispy chickpea bowls</b><span>35 min</span></a><a class="rc" href="#"><img src="dish1.svg" alt=""><b>Sheet-pan gnocchi</b><span>30 min</span></a></div>
+<h2 id="pasta">Pasta</h2><div class="rgrid"><a class="rc" href="./"><img src="carbonara.svg" alt=""><b>Weeknight Spaghetti Carbonara</b><span>25 min</span></a><a class="rc" href="#"><img src="dish2.svg" alt=""><b>Lemon ricotta pasta</b><span>20 min</span></a><a class="rc" href="#"><img src="dish5.svg" alt=""><b>Brown butter sage ravioli</b><span>25 min</span></a></div></main>
+<footer>© 2026 Lina's Kitchen · A fictional blog made for the Sofa Surf demo · Follow us everywhere</footer>
+</body>
+</html>
